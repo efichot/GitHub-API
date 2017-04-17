@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>{{ title }}</h1>
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="nav navbar-nav navbar-center">
+            {{ include('form_search.html') }}
+        </div>
+    </div>
+</nav>
+{% for item in items %}
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            {{ include('subscription.html') }}
+            <a href="">{{ item.full_name }}</a>
+            <span class="badge">{{ item.score }}</span>
+        </h3>
+    </div>
+    <div class="panel-body">{{ item.description }}</div>
+</div>
+{% endfor %}
+{% endblock %}

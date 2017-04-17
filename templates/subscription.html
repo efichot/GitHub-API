@@ -1,0 +1,7 @@
+{% if item.subscribed %}
+    <a href="?unsubscribe={{ item.full_name }}{{ query }}"><div class="label label-success">
+        <span class="glyphicon glyphicon-eye-open"></span></div></a>
+{% else %}
+    <a href="?subscribe={{ item.full_name }}{{ query }}"><div class="label label-danger">
+        <span class="glyphicon glyphicon-eye-close"></span></div></a>
+{% endif %}

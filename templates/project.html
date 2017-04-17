@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>{{ title }}</h1>
+<ul class="list-group">
+    {% for item in items %}
+    <li class="list-group-item">
+        
+        <a href="http://github.com/{{ item.full_name }}" target="_blank">
+            {{ item.full_name }}
+        </a>
+        <span class="badge">{{ item.version }}</span>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
